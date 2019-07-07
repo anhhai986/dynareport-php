@@ -9,6 +9,8 @@ class DynaReportTest extends TestCase
 
     public function testGenerateAndDownloadReport()
     {
+        $outputFile = tempnam(sys_get_temp_dir(), 'dynareport');
+
         $dr = new DynaReport();
         $dr->setApiKey("2fd3a35e2a3af7c293e2a6321f846030");
         $dr->uploadTemplate(getcwd() . '/tests/template/template.docx');
@@ -21,9 +23,9 @@ class DynaReportTest extends TestCase
         ]);
         $dr->generateAndDownloadReport(
             $dr->getUploadedTemplateId(),
-            getcwd() . '/tests/output/my-generated-report.pdf'
+            $outputFile
         );
 
-        $this->assertFileExists(getcwd() . '/tests/output/my-generated-report.pdf');
+        $this->assertFileExists($outputFile);
     }
 }
