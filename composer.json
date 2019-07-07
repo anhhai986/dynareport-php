@@ -1,0 +1,36 @@
+{
+  "name": "api-den/dynareport",
+  "description": "Cloud based, interactive report engine which helps in generating well formatted PDF reports from Word / DOCX templates.",
+  "require": {
+    "php":"^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit" : "^8.0"
+  },
+  "keywords": [
+    "report",
+    "pdf",
+    "docx",
+    "template",
+    "variables"
+  ],
+  "homepage": "https://www.apiden.com/dynareport/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "API Den",
+      "email": "support@apiden.com",
+      "homepage": "https://www.apiden.com/"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ApiDen\\DynaReport\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ApiDen\\DynaReport\\Tests\\": "tests"
+    }
+  }
+}
