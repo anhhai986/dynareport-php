@@ -98,8 +98,6 @@ class DynaReport
 
         $postValuesJson = json_encode($postValues);
 
-        var_dump($postValuesJson);
-
         $ch = curl_init('https://api.apiden.com/dynareport/template');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, true);
@@ -152,7 +150,6 @@ class DynaReport
         $postValues['outputType'] = $this->outputType;
 
         $postValuesJson = json_encode($postValues);
-        var_dump($postValuesJson);
 
         $ch = curl_init('https://api.apiden.com/dynareport');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

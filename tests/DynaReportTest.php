@@ -21,9 +21,9 @@ class DynaReportTest extends TestCase
         ]);
         $dr->generateAndDownloadReport(
             $dr->getUploadedTemplateId(),
-            getcwd() . '/tests/output/my-generatred-report.pdf'
+            getcwd() . '/tests/output/my-generated-report.pdf'
         );
 
-        $this->assertFileExists(getcwd() . '/tests/output/my-generatred-report.pdf');
+        $this->assertFileExists(getcwd() . '/tests/output/my-generated-report.pdf');
     }
 }
